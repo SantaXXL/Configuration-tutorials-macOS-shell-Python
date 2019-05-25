@@ -1,4 +1,4 @@
-Note: everything I wrote here was tested on macOS, May 2019. Steps on other UNIX systems should be fairly similar, if not identical. 
+Note: everything I wrote here was tested on macOS Mojave, May 2019. The steps on other UNIX systems should be fairly similar, if not identical. 
 
 Result:
 
