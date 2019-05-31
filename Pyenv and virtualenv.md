@@ -1,5 +1,7 @@
 Tested on: May 2019
 
+This tutorial shows how to run virtualenv with specified Python version.
+
 1. Download and install [pyenv](https://github.com/pyenv/pyenv), on Mac the most convient way to do it is via homebrew:
 `$ brew install pyenv`
 
