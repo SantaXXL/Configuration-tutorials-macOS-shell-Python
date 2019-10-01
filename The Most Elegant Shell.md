@@ -44,9 +44,9 @@ Don't worry, we'll handle it in a moment. But now, install [oh-my-zsh](https://o
 
 `$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 
-One more thing: we need [pure](https://github.com/sindresorhus/pure) prompt for a neat look. The simplest way to obtain this is to use npm. To have npm, we need to install `node`. So type in:
+One more thing: we need [pure](https://github.com/sindresorhus/pure) prompt for a neat look. The simplest way to obtain this is to use npm. So type in:
 
-`$ brew install node`
+`$ brew install npm`
 
 and then:
 
