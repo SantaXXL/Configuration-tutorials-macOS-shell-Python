@@ -20,19 +20,7 @@ Change the default shell to zsh ([credit](https://stackoverflow.com/a/44549662))
 
 Restart (cmd + q) Terminal and type `$ echo $0` and then `$ which zsh` - the output should be `-zsh` and `/usr/local/bin/zsh`. Open Hyper.app.
 
-Opening Hyper for the first time should create .hyper.js file in the $HOME directory. We need to set shell there. If you are familiar with vim, then type
-
-`$ vim ~/.hyper.js`
-
-if not, then open Finder, press cmd+shift+g at the same time and go to the "~" folder,
-
-![Imgur](https://i.imgur.com/Bt67XfH.png)
-
-Now, press cmd+shift+. (dot) to show hidden files (press it again to hide them) and open .hyper.js with some text editor. Find "shell" and put "zsh" between the single quotes.
-
-![Imgur](https://i.imgur.com/vyiLd7A.png)
-
-Save the file, restart (cmd+q) Hyper. At the moment of writing this tutorial, there is something bugged when it comes to zsh and Hyper. Some unnecessary "%" shows up:
+At the moment of writing this tutorial, there is something bugged when it comes to zsh and Hyper. Some unnecessary "%" shows up:
 
 ![Imgur](https://i.imgur.com/vdjksD8.png)
 
