@@ -78,7 +78,6 @@ sed -i'' -e 's/plugins: \[/&"hyper-snazzy"/' ~/.hyper.js
 echo "Installing cheat.sh"
 curl https://cht.sh/:cht.sh > ~/.cht.sh && chmod +x ~/.cht.sh
 echo "alias h='~/.cht.sh'" >> ~/.zshrc
-source ~/.zshrc
 echo -e "Cheat sheet installed.\nUsage:\nh [language] <command>, for instance:\nh tar\nh python list\nh c++ how to revert a list"
 
 echo "Log out and log in to see the changes in Hyper.app"
