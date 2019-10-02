@@ -7,8 +7,8 @@ maybe some day
 
 # Result
 
-![Imgur](https://i.imgur.com/IvwImTG.png)
-![Imgur](https://i.imgur.com/L2vcKPo.png)
+![Imgur](https://i.imgur.com/doZlgd8.png)
+![Imgur](https://i.imgur.com/h13pdmH.png)
 
 # Inspiration
 https://medium.com/@tomchristian91/beautiful-hyper-terminal-in-four-steps-9cc012a5573d
