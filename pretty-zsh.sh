@@ -75,9 +75,9 @@ echo -e 'unsetopt PROMPT_SP\nautoload -U promptinit; promptinit\nprompt pure' >>
 sed -i'' -e 's/plugins: \[/&"hyper-snazzy"/' ~/.hyper.js
 
 # install a nice addition - cheat.sh
-echo "Installing cheat.sh"
+echo -e "Installing cheat.sh\n\n"
 curl https://cht.sh/:cht.sh > ~/.cht.sh && chmod +x ~/.cht.sh
 echo "alias h='~/.cht.sh'" >> ~/.zshrc
-echo -e "Cheat sheet installed.\nUsage:\nh [language] <command>, for instance:\nh tar\nh python list\nh c++ how to revert a list"
+echo -e "Cheat sheet installed.\n\nUsage:\nh [language] <command>, for instance:\nh tar\nh python list\nh c++ how to revert a list\n\n"
 
 echo "Log out and log in to see the changes in Hyper.app"
