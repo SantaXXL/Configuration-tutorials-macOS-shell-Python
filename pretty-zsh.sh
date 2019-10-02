@@ -65,16 +65,16 @@ echo "Installing pure-prompt"
 npm install --global pure-prompt 
 
 # remove default theme
-sed -i'' -e 's/robbyrussell//' ~/.zshrc
+sed -i '' -e 's/robbyrussell//' ~/.zshrc
 
 # add plugin to .zshrc
-sed -i'' -e 's/git/& zsh-syntax-highlighting/' ~/.zshrc
+sed -i '' -e 's/git/& zsh-syntax-highlighting/' ~/.zshrc
 
 # pure prompt settings
 echo -e 'unsetopt PROMPT_SP\nautoload -U promptinit; promptinit\nprompt pure' >> ~/.zshrc
 
 # new Hyper's theme
-sed -i'' -e 's/plugins: \[/&"hyper-snazzy"/' ~/.hyper.js
+sed -i '' -e 's/plugins: \[/&"hyper-snazzy"/' ~/.hyper.js
 
 # install a nice addition - cheat.sh
 echo -e "Installing cheat.sh\n\n"
