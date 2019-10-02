@@ -5,15 +5,15 @@ command -v brew >/dev/null 2>&1 || { echo >&2 "Installing Homebrew Now"; \
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
 
 # install necessary programs
-if brew ls --versions git  > /dev/null; then
+if ! brew ls --versions git  > /dev/null; then
         brew install git
 fi
 
-if brew ls --versions npm > /dev/null; then
+if ! brew ls --versions npm > /dev/null; then
         brew install npm
 fi
 
-if brew ls --versions zsh > /dev/null; then
+if ! brew ls --versions zsh > /dev/null; then
         brew install zsh
 fi
 
