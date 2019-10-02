@@ -88,6 +88,8 @@ echo -e "Cheat sheet installed.\n\nUsage:\nh [language] <command>, for instance:
 # if you have installed GNU version of ls - see "brew coreutilis"
 if ls --version | grep GNU > /dev/null; then
         echo "alias ls='ls --color=auto'" >> ~/.zshrc
+else # if not and u are using the default, freeBSD-ish ls
+        echo "alias ls='ls -G' >> ~/.zshrc
 fi
 
 if gls --version > /dev/null; then
