@@ -5,7 +5,10 @@
 # Oneliner (for Linux)
 maybe some day
 
-# Result:
+# Result
 
 ![Imgur](https://i.imgur.com/IvwImTG.png)
 ![Imgur](https://i.imgur.com/L2vcKPo.png)
+
+# Inspiration
+https://medium.com/@tomchristian91/beautiful-hyper-terminal-in-four-steps-9cc012a5573d
