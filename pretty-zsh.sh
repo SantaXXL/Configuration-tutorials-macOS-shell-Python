@@ -39,7 +39,7 @@ sed -i'' -e 's/robbyrussell//' ~/.zshrc
 sed -i'' -e 's/git/& zsh-syntax-highlighting/' ~/.zshrc
 
 # pure prompt settings
-echo 'unsetopt PROMPT_SP\nautoload -U promptinit; promptinit\nprompt pure' >> ~/.zshrc
+echo -e 'unsetopt PROMPT_SP\nautoload -U promptinit; promptinit\nprompt pure' >> ~/.zshrc
 
 # new hyper's theme
 sed -i'' -e 's/plugins: \[/&"hyper-snazzy"/' ~/.hyper.js
