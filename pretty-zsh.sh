@@ -28,13 +28,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 npm install --global pure-prompt 
 
 # remove default theme
-sed -i'' 's/robbyrussell//' ~/.zshrc
+sed -i'' -e 's/robbyrussell//' ~/.zshrc
 
 # add plugin to .zshrc
-sed -i'' 's/git/& zsh-syntax-highlighting/' ~/.zshrc
+sed -i'' -e 's/git/& zsh-syntax-highlighting/' ~/.zshrc
 
 # pure prompt settings
 echo 'unsetopt PROMPT_SP\nautoload -U promptinit; promptinit\nprompt pure' >> ~/.zshrc
 
 # new hyper's theme
-sed -i'' 's/plugins: \[/&"hyper-snazzy"/' ~/.hyper.js
+sed -i'' -e 's/plugins: \[/&"hyper-snazzy"/' ~/.hyper.js
