@@ -10,6 +10,8 @@ fi
 if [ -f ~/.hyper.js ]; then
         echo "Creating backup of ~/.hyper.js"
         mv ~/.hyper.js ~/.hyper.js.bak
+        echo "Open Hyper.app to create a fresh copy of .hyper.js file"
+        open /Applications/Hyper.app
 fi
 
 if [ -d ~/.hyper_plugs ]; then
@@ -56,7 +58,7 @@ chsh -s $(which zsh)
 
 # install oh-my-zsh and syntax-highlighting
 echo "Installing oh-my-zsh (switching shell to zsh)"
-zsh sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 
+zsh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
 
 echo "Installing pure-prompt"
