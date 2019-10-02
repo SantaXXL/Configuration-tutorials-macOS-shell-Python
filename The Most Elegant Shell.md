@@ -1,6 +1,6 @@
 
 # Oneliner (for macOS)
-`curl -O https://raw.githubusercontent.com/SantaXXL/Configuration-tutorials-macOS-shell-Python-/master/pretty-zsh-macos.sh && chmod +x pretty-zsh-macos.sh && ./pretty-zsh-macos.sh && rm pretty-zsh-macos.sh`
+`curl -O https://raw.githubusercontent.com/SantaXXL/Configuration-tutorials-macOS-shell-Python-/master/pretty-zsh-macos.sh && chmod +x pretty-zsh-macos.sh && ./pretty-zsh-macos.sh && rm -f pretty-zsh-macos.sh`
 
 # Oneliner (for Linux)
 maybe some day
