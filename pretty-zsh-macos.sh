@@ -65,10 +65,10 @@ echo "Installing pure-prompt..."
 npm install --global pure-prompt 
 
 # remove default theme
-sed -i '' -e 's/robbyrussell//' ~/.zshrc
+sed -i '' -e 's/robbyrussell//' ~/.zshrc 2>/dev/null 
 
 # add plugin to .zshrc
-sed -i '' -e 's/git/& zsh-syntax-highlighting/' ~/.zshrc
+sed -i '' -e 's/git/& zsh-syntax-highlighting/' ~/.zshrc 2>/dev/null 
 
 # pure prompt settings
 echo -e 'unsetopt PROMPT_SP\nautoload -U promptinit; promptinit\nprompt pure' >> ~/.zshrc
@@ -96,4 +96,4 @@ if gls --version > /dev/null; then
         echo "alias gls='gls --color=auto'" >> ~/.zshrc
 fi
 
-echo "Log out and log in to see the changes in Hyper.app (unfortunately there is some bug and Hyper ignores the result of chsh command, unless the user logs out and logs in again)"
+echo 'Log out and log in to see the changes in Hyper.app (unfortunately there is some bug and Hyper ignores the result of chsh command, unless the user logs out and logs in again)'
