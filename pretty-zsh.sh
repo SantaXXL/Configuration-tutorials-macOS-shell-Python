@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Check to see if Homebrew is installed, and install it if it is not
+echo "Checking if Homebrew is installed..."
 command -v brew >/dev/null 2>&1 || { echo >&2 "Installing Homebrew Now"; \
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
 
@@ -23,6 +23,7 @@ fi
 
 
 # set zsh installed by homebrew as a default shell
+echo "In order to allow change user database information from this shell, add it to /etc/shells (requires sudo)"
 sudo sh -c "echo $(which zsh) >> /etc/shells"
 chsh -s $(which zsh)
 
@@ -43,3 +44,5 @@ echo -e 'unsetopt PROMPT_SP\nautoload -U promptinit; promptinit\nprompt pure' >>
 
 # new hyper's theme
 sed -i'' -e 's/plugins: \[/&"hyper-snazzy"/' ~/.hyper.js
+
+echo "Log in and log out"
