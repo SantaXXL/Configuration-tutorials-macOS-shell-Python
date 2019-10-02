@@ -12,3 +12,5 @@ maybe some day
 
 # Inspiration
 https://medium.com/@tomchristian91/beautiful-hyper-terminal-in-four-steps-9cc012a5573d
+
+Tested on macOS Mojave 10.14.6, October 2019.
