@@ -1,5 +1,25 @@
 #!/bin/bash
 
+if [ -f ~/.zshrc ]; then
+        echo "Creating backup of ~/.zshrc"
+        mv ~/.zshrc ~/.zshrc.bak
+fi
+
+if [ -f ~/.hyper.js ]; then
+        echo "Creating backup of ~/.hyper.js"
+        mv ~/.hyper.js ~/.hyper.js.bak
+fi
+
+if [ -d ~/.hyper_plugs ]; then
+        echo "Creating backup of ~/.hyper_plugins"
+        mv ~/.hyper_plugins ~/.hyper_plugins.bak
+fi
+
+if [ -d ~/.oh-my-zsh ]; then
+        echo "Creating backup of ~/.oh-my-zsh"
+        mv ~/.oh-my-zsh ~/.oh-my-zsh.bak
+fi
+
 echo "Checking if Homebrew is installed..."
 command -v brew >/dev/null 2>&1 || { echo >&2 "Installing Homebrew Now"; \
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
@@ -43,7 +63,14 @@ sed -i'' -e 's/git/& zsh-syntax-highlighting/' ~/.zshrc
 # pure prompt settings
 echo -e 'unsetopt PROMPT_SP\nautoload -U promptinit; promptinit\nprompt pure' >> ~/.zshrc
 
-# new hyper's theme
+# new Hyper's theme
 sed -i'' -e 's/plugins: \[/&"hyper-snazzy"/' ~/.hyper.js
 
-echo "Log in and log out"
+# install a nice addition - cheat.sh
+echo "Installing cheat.sh"
+curl https://cht.sh/:cht.sh > ~/.cht.sh && chmod +x ~/.cht.sh
+echo "alias h='~/.cht.sh'" >> ~/.zshrc
+source ~/.zshrc
+echo -e "Cheat sheet installed.\nUsage:\nh [language] <command>, for instance:\nh tar\nh python list\nh c++ how to revert a list"
+
+echo "Log out and log in to see the changes in Hyper.app"
