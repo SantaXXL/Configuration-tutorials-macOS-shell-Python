@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Creating backup of the following files/directories (if they exist): .zshrc, .hyper.js, .hyper_plugins, .oh-my-zsh"
+
 if [ -f ~/.zshrc ]; then
         echo "Creating backup of ~/.zshrc"
         mv ~/.zshrc ~/.zshrc.bak
@@ -25,25 +27,27 @@ command -v brew >/dev/null 2>&1 || { echo >&2 "Installing Homebrew Now"; \
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
 
 # install necessary programs
+echo "Checking if git is installed..."
 if ! brew ls --versions git  > /dev/null; then
         brew install git
 fi
 
+echo "Checking if npm is installed..."
 if ! brew ls --versions npm > /dev/null; then
         brew install npm
 fi
 
+echo "Checking if the newest version of zsh is installed..."
 if ! brew ls --versions zsh > /dev/null; then
         brew install zsh
 fi
 
-brew tap caskroom/cask
-if ! brew cask ls --versions hyper > /dev/null; then
-        brew cask install hyper
+echo "Checking if Hyper.app is installed..."
+if [ ! -d /Applications/Hyper.app ]; then
+        brew tap caskroom/cask && brew cask install hyper
         echo "Open Hyper (so it can create ~/.hyper.js file)"
         open /Applications/Hyper.app
 fi
-
 
 # set zsh installed by homebrew as a default shell
 echo "In order to allow change user database information from this shell, add it to /etc/shells (requires sudo)"
@@ -51,9 +55,12 @@ sudo sh -c "echo $(which zsh) >> /etc/shells"
 chsh -s $(which zsh)
 
 # install oh-my-zsh and syntax-highlighting
+echo "Installing oh-my-zsh (switching shell to zsh)"
+zsh
 yes | sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
 
+echo "Installing pure-prompt"
 npm install --global pure-prompt 
 
 # remove default theme
