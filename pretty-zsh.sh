@@ -82,4 +82,4 @@ curl https://cht.sh/:cht.sh > ~/.cht.sh && chmod +x ~/.cht.sh
 echo "alias h='~/.cht.sh'" >> ~/.zshrc
 echo -e "Cheat sheet installed.\n\nUsage:\nh [language] <command>, for instance:\nh tar\nh python list\nh c++ how to revert a list\n\n"
 
-echo "Log out and log in to see the changes in Hyper.app"
+echo "Log out and log in to see the changes in Hyper.app (unfortunately there is some bug and Hyper ignores the result of chsh command, unless the user logs out and logs in again)"
