@@ -1,13 +1,14 @@
-Note: everything I wrote here was tested on macOS Mojave, May 2019. The steps on other UNIX systems should be fairly similar, if not identical. 
+Note: everything I wrote here was tested on macOS Mojave, October 2019. The steps on other UNIX systems should be fairly similar, if not identical. 
 
 Result:
 
 ![Imgur](https://i.imgur.com/xWVkBql.png)
 
 
-# Oneliner
+# Oneliner (for macOS)
 `curl -O https://raw.githubusercontent.com/SantaXXL/Configuration-tutorials-macOS-shell-Python-/master/pretty-zsh.sh && chmod +x pretty-zsh.sh && ./pretty-zsh.sh && rm pretty-zsh.sh`
 
+# The hard way
 Firstly, make sure you have [homebrew](https://brew.sh) installed. Install zsh (I use default Terminal app):
 
 `$ brew install zsh`
