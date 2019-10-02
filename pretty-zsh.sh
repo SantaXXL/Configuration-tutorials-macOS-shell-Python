@@ -73,8 +73,10 @@ sed -i '' -e 's/git/& zsh-syntax-highlighting/' ~/.zshrc
 # pure prompt settings
 echo -e 'unsetopt PROMPT_SP\nautoload -U promptinit; promptinit\nprompt pure' >> ~/.zshrc
 
-# new Hyper's theme
-sed -i '' -e 's/plugins: \[/&"hyper-snazzy"/' ~/.hyper.js
+# new Hyper's theme + useful plugins
+hyper i hyper-snazzy
+hyper i hypercwd
+hyper-tabs-enhanced
 
 # install a nice addition - cheat.sh
 echo -e "Installing cheat.sh\n\n"
