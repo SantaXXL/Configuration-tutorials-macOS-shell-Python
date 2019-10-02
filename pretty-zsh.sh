@@ -17,6 +17,11 @@ if ! brew ls --versions zsh > /dev/null; then
         brew install zsh
 fi
 
+if ! brew cask ls --versions hyper > /dev/null; then
+        brew tap caskroom/cask && brew cask install hyper
+fi
+
+
 # set zsh installed by homebrew as a default shell
 sudo sh -c "echo $(which zsh) >> /etc/shells"
 chsh -s $(which zsh)
