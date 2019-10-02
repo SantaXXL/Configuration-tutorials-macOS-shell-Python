@@ -84,4 +84,13 @@ curl https://cht.sh/:cht.sh > ~/.cht.sh && chmod +x ~/.cht.sh
 echo "alias h='~/.cht.sh'" >> ~/.zshrc
 echo -e "Cheat sheet installed.\n\nUsage:\nh [language] <command>, for instance:\nh tar\nh python list\nh c++ how to revert a list\n\n"
 
+# if you have installed GNU version of ls - see "brew coreutilis"
+if ls --version | grep GNU > /dev/null; then
+        echo "alias ls='ls --color=auto'" >> ~/.zshrc
+fi
+
+if gls --version > /dev/null; then
+        echo "alias gls='gls --color=auto'" >> ~/.zshrc
+fi
+
 echo "Log out and log in to see the changes in Hyper.app (unfortunately there is some bug and Hyper ignores the result of chsh command, unless the user logs out and logs in again)"
