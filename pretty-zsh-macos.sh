@@ -44,6 +44,11 @@ if ! brew ls --versions zsh > /dev/null; then
         brew install zsh
 fi
 
+echo "Checking if rlwrap is installed..."
+if ! brew ls --versions rlwrap > /dev/null; then
+        brew install rlwrap
+fi
+
 echo "Checking if Hyper.app is installed..."
 if [ ! -d /Applications/Hyper.app ]; then
         brew tap caskroom/cask && brew cask install hyper
