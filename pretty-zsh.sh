@@ -40,6 +40,8 @@ fi
 brew tap caskroom/cask
 if ! brew cask ls --versions hyper > /dev/null; then
         brew cask install hyper
+        echo "Open Hyper (so it can create ~/.hyper.js file)"
+        open /Applications/Hyper.app
 fi
 
 
