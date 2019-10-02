@@ -5,7 +5,7 @@ Result:
 ![Imgur](https://i.imgur.com/xWVkBql.png)
 
 
-#Oneliner
+# Oneliner
 `curl -O https://raw.githubusercontent.com/SantaXXL/Configuration-tutorials-macOS-shell-Python-/master/pretty-zsh.sh && chmod +x pretty-zsh.sh && ./pretty-zsh.sh && rm pretty-zsh.sh`
 
 Firstly, make sure you have [homebrew](https://brew.sh) installed. Install zsh (I use default Terminal app):
