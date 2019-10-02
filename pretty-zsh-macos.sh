@@ -57,11 +57,11 @@ sudo sh -c "echo $(which zsh) >> /etc/shells"
 chsh -s $(which zsh)
 
 # install oh-my-zsh and syntax-highlighting
-echo "Installing oh-my-zsh"
+echo "Installing oh-my-zsh..."
 yes n | zsh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
 
-echo "Installing pure-prompt"
+echo "Installing pure-prompt..."
 npm install --global pure-prompt 
 
 # remove default theme
@@ -74,9 +74,10 @@ sed -i '' -e 's/git/& zsh-syntax-highlighting/' ~/.zshrc
 echo -e 'unsetopt PROMPT_SP\nautoload -U promptinit; promptinit\nprompt pure' >> ~/.zshrc
 
 # new Hyper's theme + useful plugins
+echo "Installing Hyper's plugins..."
 hyper i hyper-snazzy
 hyper i hypercwd
-hyper-tabs-enhanced
+hyper i hyper-tabs-enhanced
 
 # install a nice addition - cheat.sh
 echo -e "Installing cheat.sh\n\n"
