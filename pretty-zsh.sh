@@ -17,8 +17,9 @@ if ! brew ls --versions zsh > /dev/null; then
         brew install zsh
 fi
 
+brew tap caskroom/cask
 if ! brew cask ls --versions hyper > /dev/null; then
-        brew tap caskroom/cask && brew cask install hyper
+        brew cask install hyper
 fi
 
 
