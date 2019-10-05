@@ -11,6 +11,8 @@ git clone https://github.com/fabiomaia/linuxify.git
 ./linuxify/linuxify install
 cp linuxify/.linuxify ~/.linuxify
 rm -rf linuxify
+echo '. ~/.linuxify' >> ~/.bashrc
+. ~/.bashrc
 
 # install and configure shell
 curl -O https://raw.githubusercontent.com/SantaXXL/Configuration-tutorials-macOS-shell-Python-/master/pretty-zsh-macos.sh
