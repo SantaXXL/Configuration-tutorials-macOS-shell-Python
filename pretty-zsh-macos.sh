@@ -51,7 +51,7 @@ fi
 
 echo "Checking if Hyper.app is installed..."
 if [ ! -d /Applications/Hyper.app ]; then
-        brew tap caskroom/cask && brew cask install hyper
+        brew cask install hyper
         echo "Open Hyper (so it can create ~/.hyper.js file)"
         open /Applications/Hyper.app
 fi
