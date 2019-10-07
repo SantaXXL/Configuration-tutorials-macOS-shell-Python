@@ -4,24 +4,24 @@ echo "Creating backup of the following files/directories (if they exist): .zshrc
 
 if [ -f ~/.zshrc ]; then
         echo "Creating backup of ~/.zshrc"
-        mv ~/.zshrc ~/.zshrc.bak
+        mv ~/.zshrc ~/.zshrc~
 fi
 
 if [ -f ~/.hyper.js ]; then
         echo "Creating backup of ~/.hyper.js"
-        mv ~/.hyper.js ~/.hyper.js.bak
+        mv ~/.hyper.js ~/.hyper.js~
         echo "Open Hyper.app to create a fresh copy of .hyper.js file"
         open /Applications/Hyper.app
 fi
 
 if [ -d ~/.hyper_plugs ]; then
         echo "Creating backup of ~/.hyper_plugins"
-        mv ~/.hyper_plugins ~/.hyper_plugins.bak
+        mv ~/.hyper_plugins ~/.hyper_plugins~
 fi
 
 if [ -d ~/.oh-my-zsh ]; then
         echo "Creating backup of ~/.oh-my-zsh"
-        mv ~/.oh-my-zsh ~/.oh-my-zsh.bak
+        mv ~/.oh-my-zsh ~/.oh-my-zsh~
 fi
 
 echo "Checking if Homebrew is installed..."
