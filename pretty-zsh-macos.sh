@@ -14,7 +14,7 @@ if [ -f ~/.hyper.js ]; then
         open /Applications/Hyper.app
 fi
 
-if [ -d ~/.hyper_plugs ]; then
+if [ -d ~/.hyper_plugins ]; then
         echo "Creating backup of ~/.hyper_plugins"
         mv ~/.hyper_plugins ~/.hyper_plugins~
 fi
@@ -69,7 +69,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 echo "Installing pure-prompt..."
 npm install --global pure-prompt 
 
-# remove default theme
+# remove the default theme
 sed -i '' -e 's/robbyrussell//' ~/.zshrc 2>/dev/null 
 
 # add plugin to .zshrc
@@ -90,14 +90,10 @@ echo "alias h='~/.cht.sh'" >> ~/.zshrc
 echo -e "Cheat sheet installed.\n\nUsage:\nh [language] <command>, for instance:\nh tar\nh python list\nh c++ how to revert a list\n\n"
 
 # if you have installed GNU version of ls - see "brew coreutilis"
-if ls --version | grep GNU > /dev/null; then
-        echo "alias ls='ls --color=auto'" >> ~/.zshrc
+if ! brew ls --versions coreutils > /dev/null; then
+        echo "alias ls='gls --color=auto'" >> ~/.zshrc
 else # if not and u are using the default, freeBSD-ish ls
         echo "alias ls='ls -G'" >> ~/.zshrc
-fi
-
-if gls --version > /dev/null; then
-        echo "alias gls='gls --color=auto'" >> ~/.zshrc
 fi
 
 echo 'Log out and log in to see the changes in Hyper.app (unfortunately there is some bug and Hyper ignores the result of chsh command, unless the user logs out and logs in again)'
