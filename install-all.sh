@@ -21,7 +21,7 @@ chmod +x pretty-zsh-macos.sh
 rm -f pretty-zsh-macos.sh
 echo '. ~/.linuxify' >> ~/.zshrc
 
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json visual-studio-code vlc transmission pdf-expert qnapi fluor spotify google-chrome adguard 
+brew cask install qlcolorcode qlmarkdown quicklook-json visual-studio-code vlc transmission pdf-expert qnapi fluor spotify google-chrome adguard 
 
 brew tap colindean/fonts-nonfree 
 brew cask install font-microsoft-office
